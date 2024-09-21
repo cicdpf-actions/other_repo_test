@@ -1,0 +1,9 @@
+name: "My Custom Action"
+description: "This is a custom action from other_repo_test."
+inputs:
+  message:
+    description: "A message to output"
+    required: true
+runs:
+  using: "node12" # or "composite", "docker" etc., depending on your action
+  main: "index.js" # or your main entry file
