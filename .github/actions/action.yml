@@ -5,5 +5,7 @@ inputs:
     description: "A message to output"
     required: true
 runs:
-  using: "node12" # or "composite", "docker" etc., depending on your action
-  main: "index.js" # or your main entry file
+  using: "composite"  # 複合アクションとして実行する場合
+  steps:
+    - name: Echo the message
+      run: echo "${{ inputs.message }}"
